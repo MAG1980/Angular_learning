@@ -1,6 +1,11 @@
 <main>
-  <h1 class="text-bg-info">{{title}}</h1>
-  <input type="text" [(ngModel)]="name">
-  <p>Hello, {{name}}!</p>
-  <app-server></app-server>
+  <h1 class="heading text-center text-bg-info">{{ title }}</h1>
+  <div class="container col-xs-12">
+    <input type="text" [(ngModel)]="name">
+    <p>Hello, <span>{{ name }}</span>!</p>
+    <hr>
+    <app-server></app-server>
+    <hr>
+    <app-servers></app-servers>
+  </div>
 </main>
