@@ -12,7 +12,8 @@
     (click)="onCreateServer()"
   >Add Server
   </button>
-  <p>{{serverCreationStatus}}</p>
+<!--  <p>{{serverCreationStatus}}</p>-->
+  <p *ngIf="serverName.length">Server was created. Server name is {{ serverName }}</p>
   <p>Server name:{{ serverName }}</p>
   <hr/>
   <h3>TwoWayDatabinding</h3>
