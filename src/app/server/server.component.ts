@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 
 export type status = 'idle' | 'loading' | 'success' | 'error';
+export type color = 'yellow' | 'blue' | 'green' | 'red';
 
 @Component({
   selector: 'app-server',
@@ -15,10 +16,12 @@ export class ServerComponent {
   serverId: number = 1;
   serverStatus: status = 'idle';
   statuses: status[] = ['idle', 'loading', 'success', 'error'];
-  colors = ['magenta', 'blue', 'green', 'red'];
+  colors: color[] = ['yellow', 'blue', 'green', 'red'];
+  color: color = 'yellow';
 
   constructor() {
     this.setServerStatus();
+    this.color = this.setColor();
   }
 
   setServerStatus() {
@@ -26,7 +29,7 @@ export class ServerComponent {
     this.serverStatus = this.statuses[randomNumber];
   }
 
-  getColor() {
+  setColor() {
     switch ( this.serverStatus ) {
       case 'idle':
         return this.colors[0];

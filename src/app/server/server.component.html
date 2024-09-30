@@ -1,5 +1,7 @@
-<p class="badge text-white"
-   [ngStyle]="{backgroundColor:getColor()}">
+<p class="badge p-2"
+   [ngStyle]="{backgroundColor:color}"
+   [ngClass]="{'text-white':color!=='yellow'}"
+>
   The Server with ID №{{ serverId }} is {{ serverStatus }}
 </p>
 
