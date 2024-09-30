@@ -23,7 +23,12 @@
         (click)="clearTwoWayBindingText()">
     Clear Input
   </button>
+  <button
+    class="btn btn-primary"
+    (click)="setText()"
+  >Add Text</button>
   <p>{{ twoWayBindingText }}</p>
+  <p>{{ resultText }}</p>
   <app-server></app-server>
   <app-server></app-server>
 </div>
