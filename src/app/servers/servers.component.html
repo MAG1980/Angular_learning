@@ -14,6 +14,16 @@
   </button>
   <p>{{serverCreationStatus}}</p>
   <p>Server name:{{ serverName }}</p>
+  <hr/>
+  <h3>TwoWayDatabinding</h3>
+  <input type="text" [(ngModel)]="twoWayBindingText"/>
+  <button
+    class="btn bg-body"
+    type="button"
+        (click)="clearTwoWayBindingText()">
+    Clear Input
+  </button>
+  <p>{{ twoWayBindingText }}</p>
   <app-server></app-server>
   <app-server></app-server>
 </div>

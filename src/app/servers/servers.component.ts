@@ -15,6 +15,7 @@ export class ServersComponent {
   tempServerName='';
   serverName='';
   servers: string[] = ['Testserver', 'Testserver 2'];
+  twoWayBindingText='';
 
 
   constructor() {
@@ -37,5 +38,9 @@ export class ServersComponent {
     this.tempServerName= (<HTMLInputElement>event.target).value
     // this.serverName= (event.target as HTMLInputElement).value
     console.log(this.tempServerName);
+  }
+
+  clearTwoWayBindingText(){
+    this.twoWayBindingText='';
   }
 }
