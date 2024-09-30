@@ -17,6 +17,7 @@ export class ServersComponent {
   servers: string[] = ['Testserver', 'Testserver 2'];
   twoWayBindingText='';
   resultText='';
+  username='';
 
 
   constructor() {
@@ -48,5 +49,9 @@ export class ServersComponent {
   setText(){
     this.resultText=this.twoWayBindingText
     this.twoWayBindingText='';
+  }
+
+  clearUsername(){
+    this.username='';
   }
 }

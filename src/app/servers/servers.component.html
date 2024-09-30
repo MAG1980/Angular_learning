@@ -26,9 +26,27 @@
   <button
     class="btn btn-primary"
     (click)="setText()"
-  >Add Text</button>
+  >Add Text
+  </button>
   <p>{{ twoWayBindingText }}</p>
   <p>{{ resultText }}</p>
   <app-server></app-server>
   <app-server></app-server>
+  <hr/>
+  <div class="row flex-column p-5">
+    <input
+      class="form-control"
+      type="text"
+      [(ngModel)]="username"
+    >
+    <button
+      class="btn btn-primary"
+      type="button"
+      (click)="clearUsername()"
+      [disabled]="!username.length"
+    >Clear username
+    </button>
+  </div>
+  <p class="mt-2">Username is {{ username }}</p>
+
 </div>
