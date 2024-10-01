@@ -18,6 +18,7 @@
     <p>No server was created.</p>
   </ng-template>
   <p>Server name:{{ serverName }}</p>
+  <app-server *ngFor="let server of servers"></app-server>
   <hr/>
   <h3>TwoWayDatabinding</h3>
   <input type="text" [(ngModel)]="twoWayBindingText"/>
@@ -32,10 +33,9 @@
     (click)="setText()"
   >Add Text
   </button>
+  <hr/>
   <p>{{ twoWayBindingText }}</p>
   <p>{{ resultText }}</p>
-  <app-server></app-server>
-  <app-server></app-server>
   <hr/>
   <div class="row flex-column p-5">
     <input
