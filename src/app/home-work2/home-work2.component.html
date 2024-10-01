@@ -1,0 +1,14 @@
+<div>
+  <h3>Homework №2</h3>
+  <button
+    class="btn btn-primary"
+    (click)="onClickDisplayDetails()">Display Details
+  </button>
+  <p *ngIf="showInformation">Secret information</p>
+  <p
+    *ngFor="let logItem of log; let index"
+    [ngClass]="{'bg-primary':index.id>=5 && logItem.id<=7}"
+    [ngStyle]="{color: logItem.id>=5?'white':'black'}"
+  >{{ logItem.id }}. {{ logItem.date }}
+  </p>
+</div>
