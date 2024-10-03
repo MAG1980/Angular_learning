@@ -1,21 +1,24 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 
 import { MonolithComponent } from './monolith.component';
-import { AppModule } from "../app.module";
+import { CockpitComponent } from "../cockpit/cockpit.component";
+import { ServerElementComponent } from "../server-element/server-element.component";
+import { NgFor, NgIf } from "@angular/common";
 
 @NgModule({
   declarations: [
-    MonolithComponent
+    MonolithComponent,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
-    BrowserModule,
     FormsModule,
-    AppModule,
+    NgFor,
+    NgIf
   ],
   providers: [],
   exports: [MonolithComponent]
 })
-export class MonolithModule { }
+export class MonolithModule {}
