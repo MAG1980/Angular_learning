@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './cockpit.component.css'
 })
 export class CockpitComponent {
-  serverElements = [];
   newServerName = '';
   newServerContent = '';
-  onAddServer() {
+  /*onAddServer() {
     this.serverElements.push({
       type: 'server',
       name: this.newServerName,
@@ -23,5 +22,5 @@ export class CockpitComponent {
       name: this.newServerName,
       content: this.newServerContent
     });
-  }
+  }*/
 }

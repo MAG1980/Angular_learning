@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./monolith.component.css']
 })
 export class MonolithComponent {
-  serverElements = [];
+  serverElements = [{type: 'server', name: 'Testserver', content: 'Just a test!'}];
 }
