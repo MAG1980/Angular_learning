@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from "./warning-alert/warning-alert.component";
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { HomeWork2Component } from './home-work2/home-work2.component';
+import { MonolithModule } from "./monolith/monolith.module";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeWork2Component } from './home-work2/home-work2.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ServerModule
+    ServerModule,
+    MonolithModule
   ],
   providers: [],
   bootstrap: [AppComponent]
