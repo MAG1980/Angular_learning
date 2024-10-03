@@ -9,6 +9,8 @@ import { WarningAlertComponent } from "./warning-alert/warning-alert.component";
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { HomeWork2Component } from './home-work2/home-work2.component';
 import { MonolithModule } from "./monolith/monolith.module";
+import { CockpitComponent } from './cockpit/cockpit.component';
+import { ServerElementComponent } from './server-element/server-element.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MonolithModule } from "./monolith/monolith.module";
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    HomeWork2Component
+    HomeWork2Component,
+    CockpitComponent,
+    ServerElementComponent
   ],
   imports: [
     BrowserModule,
@@ -25,6 +29,10 @@ import { MonolithModule } from "./monolith/monolith.module";
     MonolithModule
   ],
   providers: [],
+  exports: [
+    ServerElementComponent,
+    CockpitComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

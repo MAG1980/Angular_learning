@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { MonolithComponent } from './monolith.component';
+import { AppModule } from "../app.module";
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { MonolithComponent } from './monolith.component';
   imports: [
     BrowserModule,
     FormsModule,
+    AppModule,
   ],
   providers: [],
   exports: [MonolithComponent]
