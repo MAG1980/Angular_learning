@@ -1,6 +1,8 @@
 import {
   AfterContentChecked,
   AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
   Component,
   DoCheck,
   Input,
@@ -15,7 +17,13 @@ import {
   styleUrl: './server-element.component.css'
 })
 export class ServerElementComponent
-  implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked {
+  implements OnInit,
+    OnChanges,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked {
   @Input("serverElement") element: { type: string, name: string, content: string }
   @Input("name") name = "";
 
@@ -41,5 +49,13 @@ export class ServerElementComponent
 
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked called');
+  }
+
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit called');
+  }
+
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked called');
   }
 }
