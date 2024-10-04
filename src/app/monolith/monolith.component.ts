@@ -27,4 +27,8 @@ export class MonolithComponent {
   onChangeFirst() {
     this.serverElements[0].name = 'Changed!'
   }
+
+  destroyFirst() {
+    this.serverElements.splice(0, 1);
+  }
 }
