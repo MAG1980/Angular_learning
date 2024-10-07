@@ -4,6 +4,7 @@ import {
   AfterViewChecked,
   AfterViewInit,
   Component,
+  ContentChild,
   DoCheck,
   ElementRef,
   Input,
@@ -30,7 +31,10 @@ export class ServerElementComponent
     OnDestroy {
   @Input("serverElement") element: { type: string, name: string, content: string }
   @Input("name") name = "";
+  //Доступ к дочернему DOM-элементу, расположенному непосредственно в его template.
   @ViewChild('heading') header: ElementRef
+  //Доступ к дочернему DOM-элементу, полученному через <ng-content/>.
+  @ContentChild('contentParagraph') paragraph: ElementRef
 
   constructor() {
     console.log('constructor called');
@@ -50,6 +54,7 @@ export class ServerElementComponent
 
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit called');
+    console.log('AfterContentInit: ', this.paragraph.nativeElement.textContent)
   }
 
   ngAfterContentChecked(): void {
