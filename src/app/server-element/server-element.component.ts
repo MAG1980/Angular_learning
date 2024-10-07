@@ -42,7 +42,6 @@ export class ServerElementComponent
 
   ngOnInit(): void {
     console.log('ngOnInit called');
-    console.log('Text Content: ', this.header.nativeElement.textContent)
   }
 
   ngDoCheck(): void {
