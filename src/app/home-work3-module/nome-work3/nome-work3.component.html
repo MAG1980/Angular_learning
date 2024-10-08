@@ -3,12 +3,14 @@
   <app-game-control (elementNumberGenerated)="addComponent($event)">
     <div class="d-flex justify-content-between py-2">
       <app-even
-        class="col-5 w-50 bg-danger text-white text-center pt-2"
-        [number]="evenNumbers[evenNumbers.length-1]"
+        class="col-5 w-50 text-white text-center pt-2"
+        [currentNumber]="evenNumbers[evenNumbers.length-1]"
+        [allNumbers]="evenNumbers"
       />
       <app-odd
-        class="col-5 w-50 bg-primary text-white text-center pt-2"
-        [number]="oddNumbers[oddNumbers.length-1]"
+        class="col-5 w-50 text-white text-center pt-2"
+        [currentNumber]="oddNumbers[oddNumbers.length-1]"
+        [allNumbers]="oddNumbers"
       />
     </div>
   </app-game-control>

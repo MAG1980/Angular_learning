@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrl: './nome-work3.component.css'
 })
 export class NomeWork3Component {
-  oddNumbers: [number | "-"] = ["-"]
-  evenNumbers: [number | "-"] = ["-"]
+  oddNumbers: number[] = []
+  evenNumbers: number[] = []
 
   addComponent($event: number) {
     if ( $event % 2 === 0 ) {

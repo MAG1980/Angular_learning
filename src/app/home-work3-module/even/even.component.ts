@@ -6,5 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './even.component.css'
 })
 export class EvenComponent {
-  @Input() number: number | "-" = 0
+  @Input() currentNumber: number | "-" = 0
+  @Input() allNumbers: number[]
 }

@@ -1,1 +1,11 @@
-<p>{{ number }}</p>
+<div *ngIf="currentNumber; else emptyBlock">
+  <p class="bg-danger">{{ currentNumber }}</p>
+</div>
+<ng-template #emptyBlock>
+  <p class="bg-danger">-</p>
+</ng-template>
+<div *ngIf="allNumbers.length">
+  <p
+    class="bg-danger rounded-3 my-1"
+    *ngFor="let number of allNumbers">{{ number }}</p>
+</div>
