@@ -1,7 +1,15 @@
 <div>
   <h3>Homework №3</h3>
-  <app-game-control>
-    <app-odd/>
-    <app-even/>
+  <app-game-control (elementNumberGenerated)="addComponent($event)">
+    <div class="d-flex justify-content-between py-2">
+      <app-even
+        class="col-5 w-50 bg-danger text-white text-center pt-2"
+        [number]="evenNumbers[evenNumbers.length-1]"
+      />
+      <app-odd
+        class="col-5 w-50 bg-primary text-white text-center pt-2"
+        [number]="oddNumbers[oddNumbers.length-1]"
+      />
+    </div>
   </app-game-control>
 </div>
