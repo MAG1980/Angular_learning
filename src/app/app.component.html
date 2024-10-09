@@ -5,7 +5,7 @@
     <input type="text" [(ngModel)]="name">
     <p>Hello, <span>{{ name }}</span>!</p>
     <p class="text-white" appBasicHighlight>Test BasicHighlightDirective (bad)</p>
-    <p appBetterHighlight defaultColor="green" highLightColor="red">Test BasicHighlightDirective (good)</p>
+    <p  [defaultColor]="'green'" [appBetterHighlight]="'red'">Test BasicHighlightDirective (good)</p>
     <hr>
     <app-nome-work3/>
     <hr>
