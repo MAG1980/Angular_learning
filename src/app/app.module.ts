@@ -10,6 +10,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
 import { HomeWork2Component } from './home-work2/home-work2.component';
 import { MonolithModule } from "./monolith/monolith.module";
 import { HomeWork3ModuleModule } from "./home-work3-module/home-work3-module.module";
+import { BasicHighlighyDirective } from "./directives/basic-highlighy.directive";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeWork3ModuleModule } from "./home-work3-module/home-work3-module.mod
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
-    HomeWork2Component
+    HomeWork2Component,
+    BasicHighlighyDirective
   ],
   imports: [
     BrowserModule,
