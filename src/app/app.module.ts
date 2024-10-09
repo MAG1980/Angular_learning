@@ -11,6 +11,7 @@ import { HomeWork2Component } from './home-work2/home-work2.component';
 import { MonolithModule } from "./monolith/monolith.module";
 import { HomeWork3ModuleModule } from "./home-work3-module/home-work3-module.module";
 import { BasicHighlighyDirective } from "./directives/basic-highlighy.directive";
+import { BetterHighlightDirective } from './directives/better-highlight.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { BasicHighlighyDirective } from "./directives/basic-highlighy.directive"
     WarningAlertComponent,
     SuccessAlertComponent,
     HomeWork2Component,
-    BasicHighlighyDirective
+    BasicHighlighyDirective,
+    BetterHighlightDirective
   ],
   imports: [
     BrowserModule,
